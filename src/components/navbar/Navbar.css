@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    /* border: 2px solid red; */
+    position: absolute; /* Navbar ko hero section ke upar lane ke liye */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Background image ke upar dikhane ke liye */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.1); /* Transparent background */
+    backdrop-filter: blur(2px); /* Blur effect for better visibility */
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Horizontally align karega */
+    gap: 20px; /* Links ke beech spacing */
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    color: white; /* Text white rahe taki visible ho */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff385c; /* Hover effect */
+}
+
+/* Mobile ke liye menu hidden hona chahiye */
+.mobile-menu-icon {
+    display: none;
+}
+
+/* Responsive Menu */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        display: none; /* Default hidden */
+    }
+
+    .nav-links.mobile-menu {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}

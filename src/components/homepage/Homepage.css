@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playfair+Display:wght@700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Hero Section */
+  
+    .hero-section {
+        /* border: 2px solid red; */
+    position: relative;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 60px; /* Navbar ke liye jagah banane ke liye */
+}
+
+
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-text {
+    font-family: 'Cinzel Decorative', serif; 
+    position: relative;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    z-index: 1;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  /* Search Bar */
+  .search-container {
+    /* border: 2px solid red; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -50px auto 30px;
+    width: 80%;
+    max-width: 700px;
+    background: white;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-bar {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+  }
+  
+  .search-btn {
+    background: #ff385c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .search-btn:hover {
+    background: #e31c5f;
+  }
+  
+  /* Tabs Section */
+  .tabs {
+    display: flex;
+    /* border: 2px solid red; */
+    width: 95%;
+    justify-content: center;
+    margin: auto;
+    gap: 15px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    padding: 10px;
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer & Edge */
+}
+
+.tabs::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+  .tab {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    /* overflow-y: hidden; */
+    gap: 5px;
+  }
+  
+  .tab i {
+    font-size: 1.2rem;
+  }
+  
+  .tab:hover {
+    background: #ff385c;
+    color: white;
+  }
+  
+  .active {
+    background: #ff385c;
+    color: white;
+  }
+  
+  /* Listings Section */
+  .listings-container {
+    /* border: 2px solid red; */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  /* Listings Grid */
+  .listings-grid {
+    /* border: 2px solid red; */
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 0fr));
+    gap: 15px;
+    justify-content: center;
+
+    
+   
+}
+
+.listing-card {
+    width: 100%;
+    height: 250px; /* Square Shape */
+    border-radius: 8px; /* Smooth Edges */
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.listing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+  
+  .listing-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .listing-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
